@@ -13,6 +13,8 @@
     --color-grey-dark-1: #333;
     --color-grey-dark-2: #777;
     --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
 }
 
 * {
@@ -37,7 +39,7 @@ body {
     background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
     background-repeat: none;
     background-size: cover;
-    color: var(--color-grey-light-2);
+    color: var(--color-grey-dark-2);
 
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
