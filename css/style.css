@@ -113,6 +113,50 @@ body {
     width: 3.75rem;
     border-radius: 50%; }
 
+.side-nav {
+  margin-top: 3.5rem;
+  font-size: 1.4rem;
+  list-style: none; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: .5rem; }
+  .side-nav__item::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: .3rem;
+    background-color: var(--color-primary);
+    content: "";
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    width: 100%;
+    transform: scaleY(1); }
+  .side-nav__item:active::before {
+    background-color: var(--color-primary-light); }
+  .side-nav__link:link, .side-nav__link:visited {
+    align-items: center;
+    display: flex;
+    position: relative;
+    padding: 1.5rem 3rem;
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 10; }
+  .side-nav__icon {
+    height: 1.75rem;
+    margin-right: 2rem;
+    width: 1.75rem;
+    fill: currentColor; }
+
+.legal {
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--color-grey-light-4);
+  font-size: 1.2rem; }
+
 .container {
   min-height: 50rem;
   margin: 8rem auto;
@@ -133,9 +177,13 @@ body {
   display: flex; }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 0 0 18%;
   background-color: var(--color-grey-dark-1); }
 
 .hotel-view {
   flex: 1;
+  min-height: 100rem;
   background-color: #fff; }
